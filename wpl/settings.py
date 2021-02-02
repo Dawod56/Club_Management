@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'wpl.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wpl',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': '',#Your Database name
+        'USER': '',#database user
+        'PASSWORD': '',#database password
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -135,9 +135,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'cseoneeight@gmail.com'
-EMAIL_HOST_PASSWORD = 'Ku@180215'
