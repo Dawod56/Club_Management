@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}
+User
+{% endblock %}
+
+{% block container %}
+<div class="container">
+    {% for i in profile %}
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+  <div class="card-header">{{ i.full_name }}</div>
+  <div class="card-body">
+
+    <a href="{% url 'chat' i.id %}" class="card-title">Message</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+
+

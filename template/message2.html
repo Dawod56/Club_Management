@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}
+Chat
+{% endblock %}
+
+{% block container %}
+<div class="container">
+    <div class="col-md-9 abt-right">
+        <h1 class="text-center">Conversation with {{setting.org_nickname}}</h1>
+        {% for i in message %}
+        {{ i.message }}<br>
+        {% endfor %}
+        <form action="{% url 'send' receiver %}" method="POST">
+            {% csrf_token %}
+            <textarea name="message" placeholder="Type here to text"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+
+
+
+    </div>
+</div>
+{% endblock %}
+     
+     
